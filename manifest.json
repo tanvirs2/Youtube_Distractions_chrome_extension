@@ -1,0 +1,28 @@
+{
+    "description": "description here",
+    "name": "Eliminate Youtube Distractions",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "permissions": [
+        "tabs"
+    ],
+    "icons": {
+        "192": "img/android-chrome-192x192.png",
+        "16": "img/favicon-16x16.png"
+    },
+    "action": {
+        "default_icon": "img/android-chrome-192x192.png",
+        "default_popup": "youtube_search_box.html",
+        "default_title": "Eliminate Youtube Distractions"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.youtube.com/watch?v=*"],
+            "css": ["styles.css"],
+            "js": ["content.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
