@@ -4,7 +4,7 @@
     "version": "0.0.1",
     "manifest_version": 3,
     "permissions": [
-        "tabs"
+        "tabs", "activeTab"
     ],
     "icons": {
         "192": "img/android-chrome-192x192.png",
@@ -17,7 +17,7 @@
     },
     "content_scripts": [
         {
-            "matches": ["https://www.youtube.com/watch?v=*"],
+            "matches": ["https://www.youtube.com/*"],
             "css": ["styles.css"],
             "js": ["content.js"]
         }
